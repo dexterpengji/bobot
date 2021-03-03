@@ -64,7 +64,7 @@ class SerialDevice(threading.Thread):
 
 
     def get(self):
-        if self.buffer_read > 0:
+        if self.buffer_read:
             bufferred_data = self.buffer_read.copy()
             self.buffer_read = []
             return bufferred_data
